@@ -29,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Backstageel\\BladeBootstrapComponents\\": "src"
+            "Hostmoz\\BladeBootstrapComponents\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Backstageel\\BladeBootstrapComponents\\Tests\\": "tests"
+            "Hostmoz\\BladeBootstrapComponents\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -48,10 +48,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Backstageel\\BladeBootstrapComponents\\BladeBootstrapComponentsServiceProvider"
+                "Hostmoz\\BladeBootstrapComponents\\BladeBootstrapComponentsServiceProvider"
             ],
             "aliases": {
-                "BladeBootstrapComponents": "Backstageel\\BladeBootstrapComponents\\BladeBootstrapComponentsFacade"
+                "BladeBootstrapComponents": "Hostmoz\\BladeBootstrapComponents\\BladeBootstrapComponentsFacade"
             }
         }
     }
