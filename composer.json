@@ -1,11 +1,15 @@
 {
-    "name": "backstageel/blade-bootstrap-components",
+    "name": "hostmoz/blade-bootstrap-components",
     "description": "A set of Blade Components based on Boostrap-4 CSS Framework",
     "keywords": [
         "backstageel",
-        "blade-bootstrap-components"
+        "blade-bootstrap-components",
+        "Laravel",
+        "Blade",
+        "Bootstrap",
+        "Hostmoz"
     ],
-    "homepage": "https://github.com/backstageel/blade-bootstrap-components",
+    "homepage": "https://github.com/hostmoz/blade-bootstrap-components",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -16,12 +20,12 @@
         }
     ],
     "require": {
-        "php": "^7.1",
-        "illuminate/support": ">7.0"
+        "php": "^7.3",
+        "illuminate/support": ">8.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.0",
-        "phpunit/phpunit": ">8.0"
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": ">9.0"
     },
     "autoload": {
         "psr-4": {
