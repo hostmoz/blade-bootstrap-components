@@ -1,10 +1,10 @@
 <?php
 
-namespace Backstageel\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components;
 
 use Illuminate\Support\Str;
 use Illuminate\View\Component as BaseComponent;
-use Backstageel\BladeBootstrapComponents\FormDataBinder;
+use Hostmoz\BladeBootstrapComponents\FormDataBinder;
 
 abstract class Component extends BaseComponent
 {

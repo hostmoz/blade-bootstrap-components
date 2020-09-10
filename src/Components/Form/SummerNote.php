@@ -1,8 +1,8 @@
 <?php
 
-namespace Backstageel\BladeBootstrapComponents\Components\Form;
+namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
-use Backstageel\BladeBootstrapComponents\Components\Component;
+use Hostmoz\BladeBootstrapComponents\Components\Component;
 
 class SummerNote extends Component
 {

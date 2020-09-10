@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstageel\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components;
 
 class FormGroup extends Component
 {

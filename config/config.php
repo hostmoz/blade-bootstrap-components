@@ -1,5 +1,5 @@
 <?php
-use Backstageel\BladeBootstrapComponents\Components;
+use Hostmoz\BladeBootstrapComponents\Components;
 /*
  * You can place your custom package configuration in here.
  */

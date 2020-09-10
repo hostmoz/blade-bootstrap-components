@@ -1,11 +1,11 @@
 <?php
 
-namespace Backstageel\BladeBootstrapComponents;
+namespace Hostmoz\BladeBootstrapComponents;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Backstageel\BladeBootstrapComponents\Skeleton\SkeletonClass
+ * @see \Hostmoz\BladeBootstrapComponents\Skeleton\SkeletonClass
  */
 class BladeBootstrapComponentsFacade extends Facade
 {

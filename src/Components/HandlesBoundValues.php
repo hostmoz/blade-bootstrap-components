@@ -1,8 +1,8 @@
 <?php
 
-namespace Backstageel\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components;
 
-use Backstageel\BladeBootstrapComponents\FormDataBinder;
+use Hostmoz\BladeBootstrapComponents\FormDataBinder;
 
 trait HandlesBoundValues
 {

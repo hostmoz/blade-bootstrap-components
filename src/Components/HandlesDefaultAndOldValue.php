@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstageel\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components;
 
 trait HandlesDefaultAndOldValue
 {

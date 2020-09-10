@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstageel\BladeBootstrapComponents;
+namespace Hostmoz\BladeBootstrapComponents;
 
 use Illuminate\Support\Arr;
 

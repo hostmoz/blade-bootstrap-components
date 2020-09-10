@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstageel\BladeBootstrapComponents;
+namespace Hostmoz\BladeBootstrapComponents;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Blade;
@@ -29,25 +29,25 @@ class BladeBootstrapComponentsServiceProvider extends ServiceProvider
         //
 
         Blade::directive('bind', function ($bind) {
-            return '<?php app(\Backstageel\BladeBootstrapComponents\FormDataBinder::class)->bind(' . $bind . '); ?>';
+            return '<?php app(\Hostmoz\BladeBootstrapComponents\FormDataBinder::class)->bind(' . $bind . '); ?>';
         });
 
         Blade::directive('endbind', function () {
-            return '<?php app(\Backstageel\BladeBootstrapComponents\FormDataBinder::class)->pop(); ?>';
+            return '<?php app(\Hostmoz\BladeBootstrapComponents\FormDataBinder::class)->pop(); ?>';
         });
 
         Blade::directive('wire', function () {
-            return '<?php app(\Backstageel\BladeBootstrapComponents\FormDataBinder::class)->wire(); ?>';
+            return '<?php app(\Hostmoz\BladeBootstrapComponents\FormDataBinder::class)->wire(); ?>';
         });
 
         Blade::directive('endwire', function () {
-            return '<?php app(\Backstageel\BladeBootstrapComponents\FormDataBinder::class)->endWire(); ?>';
+            return '<?php app(\Hostmoz\BladeBootstrapComponents\FormDataBinder::class)->endWire(); ?>';
         });
 
         $prefix = config('blade-bootstrap-components.prefix');
 
 
-        Blade::componentNamespace('Backstageel\\BladeBootstrapComponents\\Components', $prefix);
+        Blade::componentNamespace('Hostmoz\\BladeBootstrapComponents\\Components', $prefix);
     }
 
     /**

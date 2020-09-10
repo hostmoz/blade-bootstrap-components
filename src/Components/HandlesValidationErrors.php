@@ -1,6 +1,6 @@
 <?php
 
-namespace Backstageel\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components;
 
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ViewErrorBag;

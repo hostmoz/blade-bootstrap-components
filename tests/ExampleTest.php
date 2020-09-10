@@ -1,9 +1,9 @@
 <?php
 
-namespace Backstageel\BladeBootstrapComponents\Tests;
+namespace Hostmoz\BladeBootstrapComponents\Tests;
 
 use Orchestra\Testbench\TestCase;
-use Backstageel\BladeBootstrapComponents\BladeBootstrapComponentsServiceProvider;
+use Hostmoz\BladeBootstrapComponents\BladeBootstrapComponentsServiceProvider;
 
 class ExampleTest extends TestCase
 {
