@@ -1,10 +1,10 @@
 # Blade Bootstrap Components
 
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/backstageel/blade-bootstrap-components.svg?style=flat-square)](https://packagist.org/packages/backstageel/blade-bootstrap-components)
-[![Build Status](https://img.shields.io/travis/backstageel/blade-bootstrap-components/master.svg?style=flat-square)](https://travis-ci.org/backstageel/blade-bootstrap-components)
-[![Quality Score](https://img.shields.io/scrutinizer/g/backstageel/blade-bootstrap-components.svg?style=flat-square)](https://scrutinizer-ci.com/g/backstageel/blade-bootstrap-components)
-[![Total Downloads](https://img.shields.io/packagist/dt/backstageel/blade-bootstrap-components.svg?style=flat-square)](https://packagist.org/packages/backstageel/blade-bootstrap-components)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/hostmoz/blade-bootstrap-components.svg?style=flat-square)](https://packagist.org/packages/hostmoz/blade-bootstrap-components)
+[![Build Status](https://img.shields.io/travis/hostmoz/blade-bootstrap-components/master.svg?style=flat-square)](https://travis-ci.org/hostmoz/blade-bootstrap-components)
+[![Quality Score](https://img.shields.io/scrutinizer/g/hostmoz/blade-bootstrap-components.svg?style=flat-square)](https://scrutinizer-ci.com/g/hostmoz/blade-bootstrap-components)
+[![Total Downloads](https://img.shields.io/packagist/dt/hostmoz/blade-bootstrap-components.svg?style=flat-square)](https://packagist.org/packages/hostmoz/blade-bootstrap-components)
 
 A set of Blade components to rapidly build forms with  [Bootstrap 4](https://getbootstrap.com/docs/4.0/components/forms/).
 
