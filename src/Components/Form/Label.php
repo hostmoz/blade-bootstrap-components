@@ -1,8 +1,10 @@
 <?php
 
-namespace Hostmoz\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
-class FormLabel extends Component
+use Hostmoz\BladeBootstrapComponents\Components\Component;
+
+class Label extends Component
 {
     public string $label;
 

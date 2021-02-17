@@ -1,8 +1,11 @@
 <?php
 
-namespace Hostmoz\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
-class FormGroup extends Component
+use Hostmoz\BladeBootstrapComponents\Components\Component;
+use Hostmoz\BladeBootstrapComponents\Components\HandlesValidationErrors;
+
+class Group extends Component
 {
     use HandlesValidationErrors;
 

@@ -1,8 +1,9 @@
 <?php
 
-namespace Hostmoz\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
-class FormRadio extends FormCheckbox
+
+class Radio extends Checkbox
 {
     public function __construct(
         string $name,

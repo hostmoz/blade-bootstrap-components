@@ -1,8 +1,12 @@
 <?php
 
-namespace Hostmoz\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
-class FormSelect extends Component
+use Hostmoz\BladeBootstrapComponents\Components\Component;
+use Hostmoz\BladeBootstrapComponents\Components\HandlesValidationErrors;
+use Hostmoz\BladeBootstrapComponents\Components\HandlesBoundValues;
+
+class Select extends Component
 {
     use HandlesValidationErrors;
     use HandlesBoundValues;

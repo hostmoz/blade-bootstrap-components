@@ -15,11 +15,11 @@
         @endif
     />
 
-    <x-form-label :label="$label" :for="$name" class="form-check-label" />
+    <x-bootstrap::form.label :label="$label" :for="$name" class="form-check-label" />
 
     {!! $help ?? null !!}
 
     @if($hasErrorAndShow($name))
-        <x-form-errors :name="$name" />
+        <x-bootstrap::form.errors :name="$name" />
     @endif
 </div>

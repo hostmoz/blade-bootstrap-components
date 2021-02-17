@@ -1,8 +1,10 @@
 <?php
 
-namespace Hostmoz\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
-class FormErrors extends Component
+use Hostmoz\BladeBootstrapComponents\Components\Component;
+
+class Errors extends Component
 {
     public string $name;
 

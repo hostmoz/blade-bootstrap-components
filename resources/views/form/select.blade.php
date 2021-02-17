@@ -1,5 +1,5 @@
 <div class="form-group">
-    <x-form-label :label="$label" :for="$name" />
+    <x-bootstrap::form.label :label="$label" :for="$name" />
 
     <select
         @if($isWired())
@@ -23,6 +23,6 @@
     {!! $help ?? null !!}
 
     @if($hasErrorAndShow($name))
-        <x-form-errors :name="$name" />
+        <x-bootstrap::form.errors :name="$name" />
     @endif
 </div>

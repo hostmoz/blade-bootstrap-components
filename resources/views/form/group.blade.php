@@ -1,5 +1,5 @@
 <div {!! $attributes->merge(['class' => 'form-group '  . ($hasError($name) ? 'is-invalid' : '')]) !!}>
-    <x-form-label :label="$label" />
+    <x-bootstrap::form.label :label="$label" />
 
     <div class="@if($inline) d-flex flex-row flex-wrap inline-space @endif">
         {!! $slot !!}
@@ -8,6 +8,6 @@
     {!! $help ?? null !!}
 
     @if($hasErrorAndShow($name))
-        <x-form-errors :name="$name" class="d-block" />
+        <x-bootstrap::form.errors :name="$name" class="d-block" />
     @endif
 </div>

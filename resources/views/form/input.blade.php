@@ -1,5 +1,5 @@
 <div class="@if($type === 'hidden') d-none @else form-group @endif">
-    <x-form-label :label="$label" :for="$name" />
+    <x-bootstrap::form.label :label="$label" :for="$name" />
 
     <div class="input-group">
         @isset($prepend)
@@ -33,6 +33,6 @@
     {!! $help ?? null !!}
 
     @if($hasErrorAndShow($name))
-        <x-form-errors :name="$name" />
+        <x-bootstrap::form.errors :name="$name" />
     @endif
 </div>

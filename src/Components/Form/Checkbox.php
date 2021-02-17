@@ -25,7 +25,7 @@ class Checkbox extends Component
     public function __construct(
         string $name,
         string $label = '',
-        $value = 1,
+        $value = '',
         $bind = null,
         bool $default = false,
         bool $showErrors = true,
