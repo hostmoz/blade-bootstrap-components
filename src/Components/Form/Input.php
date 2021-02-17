@@ -1,7 +1,10 @@
 <?php
 
-namespace Hostmoz\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
+use Hostmoz\BladeBootstrapComponents\Components\HandlesValidationErrors;
+use Hostmoz\BladeBootstrapComponents\Components\HandlesBoundValues;
+use Hostmoz\BladeBootstrapComponents\Components\Component;
 class FormInput extends Component
 {
     use HandlesValidationErrors;
