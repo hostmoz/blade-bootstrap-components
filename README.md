@@ -6,7 +6,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/hostmoz/blade-bootstrap-components.svg?style=flat-square)](https://scrutinizer-ci.com/g/hostmoz/blade-bootstrap-components)
 [![Total Downloads](https://img.shields.io/packagist/dt/hostmoz/blade-bootstrap-components.svg?style=flat-square)](https://packagist.org/packages/hostmoz/blade-bootstrap-components)
 
-A set of Blade components to rapidly build forms with  [Bootstrap 4](https://getbootstrap.com/docs/4.0/components/forms/).
+A new set of Blade components to rapidly build forms with  [Bootstrap 4](https://getbootstrap.com/docs/4.0/components/forms/).
 
 ## Features
 
