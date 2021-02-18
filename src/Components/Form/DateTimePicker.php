@@ -14,7 +14,7 @@ class DateTimePicker extends Component
      *
      * @return void
      */
-    public function __construct(string $name='kkk',string $label='',string $value='')
+    public function __construct(string $name='date_time_picker',string $label='',string $value='')
     {
         $this->name= $name;
         $this->label=$label;

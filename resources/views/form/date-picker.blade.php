@@ -28,8 +28,8 @@
     <script>
         $("[name='{{$name}}']").datetimepicker({
             lang: 'en',
-            format:'Y-m-d H:i',
-            step: 30
+            format:'Y-m-d',
+            timepicker:false,
         });
     </script>
 @endpush

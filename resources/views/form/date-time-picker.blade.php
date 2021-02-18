@@ -14,20 +14,21 @@
 </div>
 
 @once
-@push('styles')
-    <link rel="stylesheet" href="{{global_asset('css/jquery.datetimepicker.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{global_asset('css/datepicker.css')}}">
-@endpush
-@push('scripts')
-    <script src="{{global_asset('vendors/moment/js/moment.min.js')}}" type="text/javascript"></script>
-    <script src="{{global_asset('js/jquery.datetimepicker.js')}}" type="text/javascript"></script>
-@endpush
+    @push('styles')
+        <link rel="stylesheet" href="{{asset('css/jquery.datetimepicker.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('css/datepicker.css')}}">
+    @endpush
+    @push('scripts')
+        <script src="{{asset('vendors/moment/js/moment.min.js')}}" type="text/javascript"></script>
+        <script src="{{asset('js/jquery.datetimepicker.js')}}" type="text/javascript"></script>
+    @endpush
 @endonce
 
 @push('scripts')
     <script>
-        $('#datetimepicker').datetimepicker({
-            lang: 'en'
+        $("[name='{{$name}}']").datetimepicker({
+            lang: 'en',
+            format:'Y-m-d H:i:s',
         });
     </script>
 @endpush
