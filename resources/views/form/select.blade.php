@@ -13,6 +13,7 @@
         @endif
 
         {!! $attributes->merge(['class' => 'form-control ' . ($hasError($name) ? 'is-invalid' : '')]) !!}>
+        <option value=""></option>
         @foreach($options as $key => $option)
             <option value="{{ $key }}" @if($isSelected($key)) selected="selected" @endif>
                 {{ $option }}
