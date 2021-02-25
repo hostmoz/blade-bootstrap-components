@@ -1,7 +1,7 @@
 <?php
 
-namespace Hostmoz\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
-class FormTextarea extends FormInput
+class Textarea extends FormInput
 {
 }

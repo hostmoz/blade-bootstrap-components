@@ -1,9 +1,9 @@
 <?php
 
-namespace Hostmoz\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
 
-class FormDateInterval extends Component
+class DateInterval extends Component
 {
     public string $nameStart;
     public string $nameEnd;

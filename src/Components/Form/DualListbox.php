@@ -1,8 +1,8 @@
 <?php
 
-namespace Hostmoz\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
-class FormDualListbox extends Component
+class DualListbox extends Component
 {
     use HandlesValidationErrors;
     use HandlesBoundValues;

@@ -1,7 +1,7 @@
 <?php
 
-namespace Hostmoz\BladeBootstrapComponents\Components;
+namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
-class FormSubmit extends Component
+class Submit extends Component
 {
 }
