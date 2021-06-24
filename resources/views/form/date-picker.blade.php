@@ -1,14 +1,21 @@
 <div class="form-group">
-    <label for="datetimepicker">
-        {{$label}}
-    </label>
+    <x-bootstrap::form.label :label="$label" :for="$name" />
     <div class="input-group">
-        <div class="input-group-prepend">
-            <span class="input-group-text">
-                <i class="fa fa-fw ti-calendar"></i>
-            </span>
-        </div>
+        @isset($prepend)
+            <div class="input-group-prepend">
+                <div class="input-group-text">
+                    {!! $prepend !!}
+                </div>
+            </div>
+        @endisset
         <input type="text" class="form-control float-right" id="{{$name}}" name="{{$name}}" value="{{$value}}" autocomplete="off"/>
+            @isset($append)
+                <div class="input-group-append">
+                    <div class="input-group-text">
+                        {!! $append !!}
+                    </div>
+                </div>
+            @endisset
     </div>
     <!-- /.input group -->
 </div>
