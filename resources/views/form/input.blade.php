@@ -20,6 +20,9 @@
                 value="{{ $value }}"
             @endif
         />
+            @if($hasErrorAndShow($name))
+                <x-bootstrap::form.errors :name="$name" />
+            @endif
 
         @isset($append)
             <div class="input-group-append">
@@ -32,7 +35,5 @@
 
     {!! $help ?? null !!}
 
-    @if($hasErrorAndShow($name))
-        <x-bootstrap::form.errors :name="$name" />
-    @endif
+
 </div>

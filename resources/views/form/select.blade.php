@@ -1,6 +1,5 @@
 <div class="form-group">
     <x-bootstrap::form.label :label="$label" :for="$name" />
-
     <select
         @if($isWired())
             wire:model="{{ $name }}"
@@ -12,7 +11,7 @@
             multiple
         @endif
 
-        {!! $attributes->merge(['class' => 'form-control ' . ($hasError($name) ? 'is-invalid' : '')]) !!}>
+        {!! $attributes->merge(['class' => 'form-select mb-3 ' . ($hasError($name) ? 'is-invalid' : '')]) !!}>
         <option value=""></option>
         @foreach($options as $key => $option)
             <option value="{{ $key }}" @if($isSelected($key)) selected="selected" @endif>

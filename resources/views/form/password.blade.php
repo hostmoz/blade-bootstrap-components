@@ -23,6 +23,9 @@
                 value="{{ $value }}"
             @endif
         />
+            @if($hasErrorAndShow($name))
+                <x-bootstrap::form.errors :name="$name" />
+            @endif
             <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
 
         @isset($append)
@@ -36,9 +39,6 @@
 
     {!! $help ?? null !!}
 
-    @if($hasErrorAndShow($name))
-        <x-bootstrap::form.errors :name="$name" />
-    @endif
 </div>
 
 @once

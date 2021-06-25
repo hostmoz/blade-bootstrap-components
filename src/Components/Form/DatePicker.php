@@ -3,9 +3,14 @@
 namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
 use Hostmoz\BladeBootstrapComponents\Components\Component;
+use Hostmoz\BladeBootstrapComponents\Components\HandlesDefaultAndOldValue;
+use Hostmoz\BladeBootstrapComponents\Components\HandlesValidationErrors;
 
 class DatePicker extends Component
 {
+    use HandlesValidationErrors;
+    use HandlesDefaultAndOldValue;
+
     public string $label='';
     public string $name='';
     public string $value='';

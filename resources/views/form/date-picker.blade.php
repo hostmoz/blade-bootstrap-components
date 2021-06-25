@@ -9,6 +9,9 @@
             </div>
         @endisset
         <input type="text" class="form-control float-right" id="{{$name}}" name="{{$name}}" value="{{$value}}" autocomplete="off"/>
+            @if($hasErrorAndShow($name))
+                <x-bootstrap::form.errors :name="$name" />
+            @endif
             @isset($append)
                 <div class="input-group-append">
                     <div class="input-group-text">
