@@ -5,6 +5,7 @@ namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 use Hostmoz\BladeBootstrapComponents\Components\Component;
 use Hostmoz\BladeBootstrapComponents\Components\HandlesValidationErrors;
 use Hostmoz\BladeBootstrapComponents\Components\HandlesBoundValues;
+use Illuminate\Support\Arr;
 
 class Select extends Component
 {
@@ -39,6 +40,7 @@ class Select extends Component
             $default = $this->getBoundValue($bind, $name) ?: $default;
 
             $this->selectedKey = old($name, $default);
+
         }
 
         $this->multiple   = $multiple;
@@ -51,14 +53,6 @@ class Select extends Component
             return false;
         }
 
-        if ($this->selectedKey === $key) {
-            return true;
-        }
-
-        if (is_array($this->selectedKey) && in_array($key, $this->selectedKey)) {
-            return true;
-        }
-
-        return false;
+        return in_array($key, Arr::wrap($this->selectedKey));
     }
 }

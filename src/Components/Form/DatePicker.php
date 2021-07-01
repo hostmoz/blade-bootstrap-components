@@ -13,16 +13,21 @@ class DatePicker extends Component
 
     public string $label='';
     public string $name='';
-    public string $value='';
+    public ?string $value='';
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct(string $name='date_picker',string $label='',string $value='')
+    public function __construct(string $name='date_picker',string $label='',string $value='',$bind = null,
+                                $default = null,
+                                $language = null,
+                                bool $showErrors = true)
     {
         $this->name= $name;
         $this->label=$label;
         $this->value=$value;
+
+        $this->setValue($name, $bind, $default, $language);
     }
 }

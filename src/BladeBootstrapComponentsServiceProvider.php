@@ -46,7 +46,6 @@ class BladeBootstrapComponentsServiceProvider extends ServiceProvider
 
         $prefix = config('blade-bootstrap-components.prefix');
 
-
         Blade::componentNamespace('Hostmoz\\BladeBootstrapComponents\\Components', $prefix);
     }
 
