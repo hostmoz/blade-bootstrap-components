@@ -1,18 +1,11 @@
 <div class="@if($type === 'hidden') d-none @else form-group @endif">
     <x-bootstrap::form.label :label="$label" :for="$name" />
-    <div class="input-group" id="show_hide_password">
-
-
-    </div>
     <div class="input-group"  id="show_hide_password">
         @isset($prepend)
-            <div class="input-group-prepend">
-                <div class="input-group-text">
-                    {!! $prepend !!}
-                </div>
+            <div class="input-group-text">
+                {!! $prepend !!}
             </div>
         @endisset
-
         <input type="password" {!! $attributes->merge(['class' => 'form-control border-end-0' . ($hasError($name) ? 'is-invalid' : '')]) !!}
             type="{{ $type }}"
 
@@ -23,18 +16,10 @@
                 value="{{ $value }}"
             @endif
         />
+            <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
             @if($hasErrorAndShow($name))
                 <x-bootstrap::form.errors :name="$name" />
             @endif
-            <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
-
-        @isset($append)
-            <div class="input-group-append">
-                <div class="input-group-text">
-                    {!! $append !!}
-                </div>
-            </div>
-        @endisset
     </div>
 
     {!! $help ?? null !!}

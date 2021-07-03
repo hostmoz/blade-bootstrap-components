@@ -15,11 +15,6 @@
         public string $name = '';
         public ?string $value = '';
 
-        /**
-         * Create a new component instance.
-         *
-         * @return void
-         */
         public function __construct(
             string $name = 'date_time_picker',
             string $label = '',

@@ -1,7 +1,7 @@
 <div class="@if($type === 'hidden') d-none @endif">
     <x-bootstrap::form.label :label="$label" :for="$name" />
 
-    <div {!! $attributes->merge(['class' => 'input-group ' . ($hasError($name) ? 'is-invalid' : '')]) !!}>
+    <div class="input-group">
         @isset($prepend)
             <div class="input-group-text">
                 {!! $prepend !!}
@@ -18,15 +18,14 @@
                 value="{{ $value }}"
             @endif
         />
-            @if($hasErrorAndShow($name))
-                <x-bootstrap::form.errors :name="$name" />
-            @endif
-
-        @isset($append)
+            @isset($append)
                 <div class="input-group-text">
                     {!! $append !!}
                 </div>
-        @endisset
+            @endisset
+            @if($hasErrorAndShow($name))
+                <x-bootstrap::form.errors :name="$name" />
+            @endif
     </div>
 
     {!! $help ?? null !!}

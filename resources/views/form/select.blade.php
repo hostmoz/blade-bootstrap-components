@@ -1,4 +1,4 @@
-<div class="form-group">
+<div>
     <x-bootstrap::form.label :label="$label" :for="$name" />
     <select
         @if($isWired())
@@ -19,10 +19,9 @@
             </option>
         @endforeach
     </select>
-
-    {!! $help ?? null !!}
-
     @if($hasErrorAndShow($name))
         <x-bootstrap::form.errors :name="$name" />
     @endif
+
+    {!! $help ?? null !!}
 </div>
