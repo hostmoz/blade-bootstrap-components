@@ -1,0 +1,78 @@
+.daterangepicker.opensleft:after {
+    display : none;
+}
+.date-picker-wrapper {
+    z-index : 2;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+    background-color : #fff;
+}
+.daterangepicker.opensright:after {
+    content : none;
+}
+.card-header {
+    padding: 9px 15px 7px 15px;
+}
+.date-picker-wrapper.no-shortcuts{
+    top: 353px;
+    left: 46px;
+    user-select: none;
+}
+.xdsoft_datetimepicker .xdsoft_datepicker{
+    width:260px;
+}
+/* bootstrap 4 conversion */
+.input-group-addon{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    padding-top: 8px;
+}
+.right_addon{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 9px;
+}
+.xdsoft_datetimepicker.xdsoft_noselect.xdsoft_{
+    top: 275px;
+    left: 340px;
+}
+.mrgn_top{
+    margin-top: 20px;
+}
+#large_modal .input-group-addon, #datetimepicker_unixtime{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+@media (max-width:768px){
+    .mrgn_responsive{
+        margin-top: 20px;
+    }
+}
+@media(max-width: 375px){
+    .xdsoft_datetimepicker.xdsoft_noselect.xdsoft_{
+        left: 20px !important;
+    }
+    .datepicker.-bottom-left-.-from-bottom-{
+        left:20px !important;
+    }
+}
+@media(min-width:425px) and (max-width:700px) {
+    .xdsoft_datetimepicker.xdsoft_noselect.xdsoft_{
+        display: none;
+        position: absolute;
+        left: 29px !important;
+        top: 318px;
+    }
+}
+.xdsoft_datetimepicker{
+    z-index:99;
+}
+@media(max-width: 1024px){
+    .set_media{
+        margin-top: 20px;
+    }
+}

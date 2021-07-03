@@ -23,6 +23,10 @@ class BladeBootstrapComponentsServiceProvider extends ServiceProvider
             $this->publishes([
                 __DIR__ . '/../resources/views' => base_path('resources/views/vendor/blade-bootstrap-components'),
             ], 'views');
+
+            $this->publishes([
+                __DIR__.'/../public' => public_path('vendor/bootstrap-components'),
+            ], 'public');
         }
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'blade-bootstrap-components');
 

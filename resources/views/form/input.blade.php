@@ -1,12 +1,10 @@
-<div class="@if($type === 'hidden') d-none @else form-group @endif">
+<div class="@if($type === 'hidden') d-none @endif">
     <x-bootstrap::form.label :label="$label" :for="$name" />
 
-    <div class="input-group">
+    <div {!! $attributes->merge(['class' => 'input-group ' . ($hasError($name) ? 'is-invalid' : '')]) !!}>
         @isset($prepend)
-            <div class="input-group-prepend">
-                <div class="input-group-text">
-                    {!! $prepend !!}
-                </div>
+            <div class="input-group-text">
+                {!! $prepend !!}
             </div>
         @endisset
 
@@ -25,11 +23,9 @@
             @endif
 
         @isset($append)
-            <div class="input-group-append">
                 <div class="input-group-text">
                     {!! $append !!}
                 </div>
-            </div>
         @endisset
     </div>
 
