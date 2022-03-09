@@ -13,7 +13,7 @@
         @endif
 
         {!! $attributes->merge(['class' => 'form-select ' . ($hasError($name) ? 'is-invalid' : '')]) !!} id="{{$name}}">
-        <option value=""></option>
+        <option></option>
         @foreach($options as $key => $option)
             <option value="{{ $key }}" @if($isSelected($key)) selected="selected" @endif>
                 {{ $option }}
@@ -28,11 +28,11 @@
 </div>
 @once
     @push('styles')
-        <link href="{{ asset('assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet" />
-        <link href="{{ asset('assets/plugins/select2/css/select2-bootstrap4.css') }}" rel="stylesheet" />
+        <link href="{{ asset('plugins/select2/css/select2.min.css') }}" rel="stylesheet" />
+        <link href="{{ asset('plugins/select2/css/select2-bootstrap4.css') }}" rel="stylesheet" />
     @endpush
     @push('scripts')
-        <script src="{{ asset('assets/plugins/select2/js/select2.min.js') }}"></script>
+        <script src="{{ asset('plugins/select2/js/select2.min.js') }}"></script>
     @endpush
 @endonce
 
@@ -41,8 +41,8 @@
         $(document).ready(function () {
             $('#{!! $name !!}').select2({
                 theme: 'bootstrap4',
+                placeholder:'{!! $placeholder??$label !!}',
                 width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
-                placeholder: $(this).data('placeholder'),
                 allowClear: Boolean($(this).data('allow-clear')),
                 minimumInputLength: 3,
                 ajax: {
