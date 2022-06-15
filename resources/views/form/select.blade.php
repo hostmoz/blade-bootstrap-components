@@ -1,4 +1,4 @@
-<div>
+<div class="mb-3">
     <x-bootstrap::form.label :label="$label" :for="$name" />
     <select
         @if($isWired())
@@ -12,7 +12,9 @@
         @endif
 
         {!! $attributes->merge(['class' => 'form-select ' . ($hasError($name) ? 'is-invalid' : '')]) !!}>
+        @if($empty)
         <option value=""></option>
+        @endif
         @foreach($options as $key => $option)
             <option value="{{ $key }}" @if($isSelected($key)) selected="selected" @endif>
                 {{ $option }}

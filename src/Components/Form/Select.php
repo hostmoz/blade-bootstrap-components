@@ -15,6 +15,7 @@ class Select extends Component
     public string $name;
     public string $label;
     public $options;
+    public $empty=false;
     public $selectedKey;
     public bool $multiple;
 
@@ -30,11 +31,14 @@ class Select extends Component
         $bind = null,
         $default = null,
         bool $multiple = false,
-        bool $showErrors = true
+        bool $showErrors = true,
+        bool $empty = false
     ) {
         $this->name    = $name;
         $this->label   = $label;
         $this->options = $options;
+
+        $this->empty = $empty;
 
         if ($this->isNotWired()) {
             $default = $this->getBoundValue($bind, $name) ?: $default;

@@ -1,19 +1,21 @@
-<x-bootstrap::form.label :label="$label" :for="$name"/>
-<div class="input-group date">
-    @isset($prepend)
-        <div class="input-group-text">
-            {!! $prepend !!}
-        </div>
-    @endisset
-    <input type="text"
-           {!! $attributes->merge(['class' => 'form-control ' . ($hasError($name) ? 'is-invalid' : '')]) !!} id="{{$name}}"
-           name="{{$name}}" value="{{$value}}">
+<div class="mb-3">
+    <x-bootstrap::form.label :label="$label" :for="$name"/>
+    <div class="input-group date">
+        @isset($prepend)
+            <div class="input-group-text">
+                {!! $prepend !!}
+            </div>
+        @endisset
+        <input type="text"
+               {!! $attributes->merge(['class' => 'form-control ' . ($hasError($name) ? 'is-invalid' : '')]) !!} id="{{$name}}"
+               name="{{$name}}" value="{{$value}}">
         <div class="input-group-text">
             <span class="bi bi-calendar-date"></span>
         </div>
-    @if($hasErrorAndShow($name))
-        <x-bootstrap::form.errors :name="$name"/>
-    @endif
+        @if($hasErrorAndShow($name))
+            <x-bootstrap::form.errors :name="$name"/>
+        @endif
+    </div>
 </div>
 
 

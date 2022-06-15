@@ -1,4 +1,4 @@
-<div class="@if($type === 'hidden') d-none @endif">
+<div class="@if($type === 'hidden') d-none @endif mb-3">
     <x-bootstrap::form.label :label="$label" :for="$name"/>
 
     <div class="input-group">
@@ -30,6 +30,4 @@
     </div>
 
     {!! $help ?? null !!}
-
-
 </div>
