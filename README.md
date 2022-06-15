@@ -47,23 +47,17 @@ There is no configuration needed unless you want to [customize the Blade views a
 ```blade
 <x-bootstrap::form.form>
     <div class="row">
-        <div class="col-4">
+        <div class="col-12 mb-3">
             <x-bootstrap::form.input name="name" label="Your Name" />
         </div>
-        <div class="col-4">
+        <div class="col-12 mb-3">
             <x-bootstrap::form.select name="country_code" :options="$countries" label="Select a Country"/>
         </div>
-        <div class="col-4">
+        <div class="col-12 mb-3">
             <x-bootstrap::form.date-picker name="teste" label="Pick a Date"/>
         </div>
 
     </div>
-    <div class="row">
-        <div class="col-12 mb-3">
-            <x-bootstrap::form.select name="interests" :options="$countries" label="Select your interests" multiple />
-        </div>
-    </div>
-
     <div class="row">
         <div class="col-6">
             <!-- Inline radio inputs -->
@@ -72,7 +66,6 @@ There is no configuration needed unless you want to [customize the Blade views a
                 <x-bootstrap::form.radio name="newsletter_frequency" value="weekly" label="Weekly" />
             </x-bootstrap::form.group>
         </div>
-        
         <div class="col-6">
             <x-bootstrap::form.group>
                 <x-bootstrap::form.checkbox name="subscribe_to_newsletter" label="Subscribe to newsletter" />
@@ -83,7 +76,7 @@ There is no configuration needed unless you want to [customize the Blade views a
 </x-bootstrap::form.form>
 ```
 
-<img src="https://raw.githubusercontent.com/hostmoz/blade-bootstrap-components/main/resources/screenshot.png" />
+<img src="https://raw.githubusercontent.com/hostmoz/blade-bootstrap-components/main/resources/screenshot.png" width="450px"/>
 
 ## Usage
 
