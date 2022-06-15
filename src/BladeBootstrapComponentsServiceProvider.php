@@ -18,15 +18,15 @@ class BladeBootstrapComponentsServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path('blade-bootstrap-components.php'),
-            ], 'config');
+            ], 'bootstrap-config');
 
             $this->publishes([
                 __DIR__ . '/../resources/views' => base_path('resources/views/vendor/blade-bootstrap-components'),
-            ], 'views');
+            ], 'bootstrap-views');
 
             $this->publishes([
                 __DIR__.'/../public' => public_path('vendor/bootstrap-components'),
-            ], 'public');
+            ], 'bootstrap-assets');
         }
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'blade-bootstrap-components');
 
