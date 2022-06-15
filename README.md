@@ -83,7 +83,7 @@ There is no configuration needed unless you want to [customize the Blade views a
 </x-bootstrap::form.form>
 ```
 
-<img src="" width="450" />
+<img src="https://raw.githubusercontent.com/hostmoz/blade-bootstrap-components/main/resources/screenshot.png" />
 
 ## Usage
 
