@@ -4,6 +4,7 @@ namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ViewErrorBag;
+use Hostmoz\BladeBootstrapComponents\Components\Component;
 
 class Form extends Component
 {

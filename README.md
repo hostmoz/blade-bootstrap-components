@@ -6,7 +6,7 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/hostmoz/blade-bootstrap-components.svg?style=flat-square)](https://scrutinizer-ci.com/g/hostmoz/blade-bootstrap-components)
 [![Total Downloads](https://img.shields.io/packagist/dt/hostmoz/blade-bootstrap-components.svg?style=flat-square)](https://packagist.org/packages/hostmoz/blade-bootstrap-components)
 
-A new set of Blade components to rapidly build forms with  [Bootstrap 4](https://getbootstrap.com/docs/4.0/components/forms/).
+A new set of Blade components to rapidly build forms with  [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/).
 
 ## Features
 
@@ -30,6 +30,13 @@ You can install the package via composer:
 ```bash
 composer require hostmoz/blade-bootstrap-components
 ```
+## Publishing Assets
+
+For some components to work correctly(ex: date-picker) you will need to publish the package assets using the command below:
+
+```bash
+php artisan vendor:publish --tag=bootstrap-assets --force
+```
 
 ## Configuration
 
@@ -38,28 +45,42 @@ There is no configuration needed unless you want to [customize the Blade views a
 ## Quick example
 
 ```blade
-<x-form>
-        <x-form-input name="name" label="Your Name" />
-        <x-form-select name="country_code" :options="$options" />
-        <x-form-select name="interests" :options="$multiOptions" label="Select your interests" multiple />
+<x-bootstrap::form.form>
+    <div class="row">
+        <div class="col-4">
+            <x-bootstrap::form.input name="name" label="Your Name" />
+        </div>
+        <div class="col-4">
+            <x-bootstrap::form.select name="country_code" :options="$countries" label="Select a Country"/>
+        </div>
+        <div class="col-4">
+            <x-bootstrap::form.date-picker name="teste" label="Pick a Date"/>
+        </div>
 
-        <!-- \Spatie\Translatable\HasTranslations -->
-        <x-form-textarea name="biography" language="nl" placeholder="Dutch Biography" />
-        <x-form-textarea name="biography" language="en" placeholder="English Biography" />
+    </div>
+    <div class="row">
+        <div class="col-12 mb-3">
+            <x-bootstrap::form.select name="interests" :options="$countries" label="Select your interests" multiple />
+        </div>
+    </div>
 
-        <!-- Inline radio inputs -->
-        <x-form-group name="newsletter_frequency" label="Newsletter frequency" inline>
-            <x-form-radio name="newsletter_frequency" value="daily" label="Daily" />
-            <x-form-radio name="newsletter_frequency" value="weekly" label="Weekly" />
-        </x-form-group>
-
-        <x-form-group>
-            <x-form-checkbox name="subscribe_to_newsletter" label="Subscribe to newsletter" />
-            <x-form-checkbox name="agree_terms" label="Agree with terms" />
-        </x-form-group>
-
-        <x-form-submit />
-</x-form>
+    <div class="row">
+        <div class="col-6">
+            <!-- Inline radio inputs -->
+            <x-bootstrap::form.group name="newsletter_frequency" label="Newsletter frequency" inline>
+                <x-bootstrap::form.radio name="newsletter_frequency" value="daily" label="Daily" />
+                <x-bootstrap::form.radio name="newsletter_frequency" value="weekly" label="Weekly" />
+            </x-bootstrap::form.group>
+        </div>
+        
+        <div class="col-6">
+            <x-bootstrap::form.group>
+                <x-bootstrap::form.checkbox name="subscribe_to_newsletter" label="Subscribe to newsletter" />
+                <x-bootstrap::form.checkbox name="agree_terms" label="Agree with terms" />
+            </x-bootstrap::form.group>
+        </div>
+    </div>
+</x-bootstrap::form.form>
 ```
 
 <img src="" width="450" />
@@ -90,12 +111,6 @@ If you discover any security related issues, please email elisio.leonardo@gmail.
 - [Elísio Leonardo](https://github.com/backstageel)
 - [All Contributors](../../contributors)
 
-- This package was inspired by https://github.com/protonemedia/laravel-form-components
-
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## Laravel Package Boilerplate
-
-This package was generated using the [Laravel Package Boilerplate](https://laravelpackageboilerplate.com).
