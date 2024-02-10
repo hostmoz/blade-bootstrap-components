@@ -32,7 +32,7 @@ class Select extends Component
         $default = null,
         bool $multiple = false,
         bool $showErrors = true,
-        bool $empty = false
+        bool $empty = true
     ) {
         $this->name    = $name;
         $this->label   = $label;
