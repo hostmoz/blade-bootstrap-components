@@ -3,6 +3,7 @@
 namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
 use Hostmoz\BladeBootstrapComponents\Components\Component;
+use Hostmoz\BladeBootstrapComponents\Components\HandlesDefaultAndOldValue;
 use Hostmoz\BladeBootstrapComponents\Components\HandlesValidationErrors;
 use Hostmoz\BladeBootstrapComponents\Components\HandlesBoundValues;
 use Illuminate\Support\Arr;
@@ -11,6 +12,7 @@ class Select extends Component
 {
     use HandlesValidationErrors;
     use HandlesBoundValues;
+    use HandlesDefaultAndOldValue;
 
     public string $name;
     public string $label;
@@ -42,8 +44,8 @@ class Select extends Component
 
         if ($this->isNotWired()) {
             $default = $this->getBoundValue($bind, $name) ?: $default;
-
-            $this->selectedKey = old($name, $default);
+            $named = $this->convertBracketsToDotNotation($name);
+            $this->selectedKey = old($named, $default);
 
         }
 
