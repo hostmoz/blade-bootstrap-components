@@ -16,10 +16,12 @@ trait HandlesDefaultAndOldValue
             return;
         }
 
-        if (!$language) {
-            $default = $this->getBoundValue($bind, $name) ?: $default;
+        $named = $this->convertBracketsToDotNotation($name);
 
-            return $this->value = old($name, $default);
+        if (!$language) {
+            $default = $this->getBoundValue($bind, $named) ?: $default;
+
+            return $this->value = old($named, $default);
         }
 
         if ($bind !== false) {
@@ -27,9 +29,15 @@ trait HandlesDefaultAndOldValue
         }
 
         if ($bind) {
-            $default = $bind->getTranslation($name, $language, false) ?: $default;
+            $default = $bind->getTranslation($named, $language, false) ?: $default;
         }
 
-        $this->value = old("{$name}.{$language}", $default);
+        $this->value = old("{$named}.{$language}", $default);
+    }
+
+    private function convertBracketsToDotNotation($string)
+    {
+        // Regular expression to match brackets and convert them to dots
+        return preg_replace('/\[(.*?)\]/', '.$1', $string);
     }
 }
