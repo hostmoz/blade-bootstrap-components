@@ -1,5 +1,5 @@
 <div class="mb-3">
-    <x-bootstrap::form.label :label="$label" :for="$name" />
+    <x-bootstrap::form.label :label="$label" :for="$name"  class="{{$required?'required':''}}"/>
     <select
         @if($isWired())
             wire:model="{{ $name }}"

@@ -1,5 +1,5 @@
 <div class="@if($type === 'hidden') d-none @endif mb-3">
-    <x-bootstrap::form.label :label="$label" :for="$name"/>
+    <x-bootstrap::form.label :label="$label" :for="$name" class="{{$required?'required':''}}"/>
 
     <div class="input-group">
         @isset($prepend)

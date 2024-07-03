@@ -13,6 +13,7 @@ class Input extends Component
     public string $name;
     public string $label;
     public string $type;
+    public  $required=false;
 
     public $value;
 
@@ -25,6 +26,7 @@ class Input extends Component
         string $name,
         string $label = '',
         string $type = 'text',
+        $required=false,
         $bind = null,
         $default = null,
         $language = null,
@@ -34,6 +36,7 @@ class Input extends Component
         $this->label      = $label;
         $this->type       = $type;
         $this->showErrors = $showErrors;
+        $this->required = $required;
 
         if ($language) {
             $this->name = "{$name}[{$language}]";
