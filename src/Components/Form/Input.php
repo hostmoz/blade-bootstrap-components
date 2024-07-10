@@ -23,7 +23,7 @@ class Input extends Component
      */
     public function __construct(
         string $name,
-        public ?string $value,
+        public ?string $value = '',
         string $label = '',
 
         string $type = 'text',
