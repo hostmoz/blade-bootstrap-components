@@ -10,29 +10,15 @@ trait HandlesDefaultAndOldValue
         string $name,
         $bind = null,
         $default = null,
-        $language = null
     ) {
         if ($this->isWired()) {
             return;
         }
 
         $named = $this->convertBracketsToDotNotation($name);
+        $default = $this->getBoundValue($bind, $named) ?: $default;
+        return $this->value = old($named, $default);
 
-        if (!$language) {
-            $default = $this->getBoundValue($bind, $named) ?: $default;
-
-            return $this->value = old($named, $default);
-        }
-
-        if ($bind !== false) {
-            $bind = $bind ?: $this->getBoundTarget();
-        }
-
-        if ($bind) {
-            $default = $bind->getTranslation($named, $language, false) ?: $default;
-        }
-
-        $this->value = old("{$named}.{$language}", $default);
     }
 
     private function convertBracketsToDotNotation($string)

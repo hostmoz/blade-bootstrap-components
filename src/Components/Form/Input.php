@@ -2,9 +2,10 @@
 
 namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
-use Hostmoz\BladeBootstrapComponents\Components\HandlesValidationErrors;
-use Hostmoz\BladeBootstrapComponents\Components\HandlesDefaultAndOldValue;
 use Hostmoz\BladeBootstrapComponents\Components\Component;
+use Hostmoz\BladeBootstrapComponents\Components\HandlesDefaultAndOldValue;
+use Hostmoz\BladeBootstrapComponents\Components\HandlesValidationErrors;
+
 class Input extends Component
 {
     use HandlesValidationErrors;
@@ -13,9 +14,7 @@ class Input extends Component
     public string $name;
     public string $label;
     public string $type;
-    public  $required=false;
-
-    public $value;
+    public $required = false;
 
     /**
      * Create a new component instance.
@@ -24,24 +23,21 @@ class Input extends Component
      */
     public function __construct(
         string $name,
+        public ?string $value,
         string $label = '',
+
         string $type = 'text',
-        $required=false,
+
+        $required = false,
         $bind = null,
         $default = null,
-        $language = null,
         bool $showErrors = true
     ) {
-        $this->name       = $name;
-        $this->label      = $label;
-        $this->type       = $type;
+        $this->name = $name;
+        $this->label = $label;
+        $this->type = $type;
         $this->showErrors = $showErrors;
         $this->required = $required;
-
-        if ($language) {
-            $this->name = "{$name}[{$language}]";
-        }
-
-        $this->setValue($name, $bind, $default, $language);
+        $this->setValue($name, $bind, $default ?? $value);
     }
 }

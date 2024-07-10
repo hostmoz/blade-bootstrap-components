@@ -8,17 +8,19 @@
             </div>
         @endisset
 
-        <input {!! $attributes->merge(['class' => 'form-control ' . ($hasError($name) ? 'is-invalid' : '')]) !!}
+        <input {!! $attributes->merge(['class' => 'form-control border-end-0' . ($hasError($name) ? 'is-invalid' : '')]) !!}
                type="{{ $type }}"
 
                @if($isWired())
                    wire:model="{{ $name }}"
                @else
                    name="{{ $name }}"
-               value="{{ $value }}"
+               value="{{$value}}"
                @endif
                placeholder="{{$placeholder??$label}}"
         />
+
+
         @isset($append)
             <div class="input-group-text">
                 {!! $append !!}
@@ -28,6 +30,5 @@
             <x-bootstrap::form.errors :name="$name"/>
         @endif
     </div>
-
     {!! $help ?? null !!}
 </div>
