@@ -9,7 +9,7 @@
         @endisset
 
         <input {!! $attributes->merge(['class' => 'form-control border-end-0' . ($hasError($name) ? 'is-invalid' : '')]) !!}
-               type="{{ $type }}"
+               type="file"
 
                @if($isWired())
                    wire:model="{{ $name }}"
@@ -18,9 +18,6 @@
                value="{{$value}}"
                @endif
                placeholder="{{$placeholder??$label}}"
-               @if($required)
-                   required="required"
-                @endif
         />
 
 
