@@ -1,5 +1,5 @@
 <div class="mb-3">
-    <x-bootstrap::form.label :label="$label" :for="$name"   class="{{$required?'required':''}}"/>
+    <x-bootstrap::form.label :label="$label" :for="$name" class="{{$required?'required':''}}"/>
     <div class="input-group date">
         @isset($prepend)
             <div class="input-group-text">
@@ -8,7 +8,10 @@
         @endisset
         <input type="text"
                {!! $attributes->merge(['class' => 'form-control ' . ($hasError($name) ? 'is-invalid' : '')]) !!} id="{{$name}}"
-               name="{{$name}}" value="{{$value}}">
+               name="{{$name}}" value="{{$value}}"
+               @if($required)
+                   required="required"
+                @endif>
         <div class="input-group-text">
             <span class="bi bi-calendar-date"></span>
         </div>

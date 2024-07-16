@@ -15,6 +15,7 @@
                    wire:model="{{ $name }}"
                @else
                    name="{{ $name }}"
+               id="{{ $name }}"
                value="{{$value}}"
                @endif
                placeholder="{{$placeholder??$label}}"
