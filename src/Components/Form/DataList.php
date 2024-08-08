@@ -2,9 +2,10 @@
 
 namespace Hostmoz\BladeBootstrapComponents\Components\Form;
 
-use Hostmoz\BladeBootstrapComponents\Components\HandlesValidationErrors;
-use Hostmoz\BladeBootstrapComponents\Components\HandlesDefaultAndOldValue;
 use Hostmoz\BladeBootstrapComponents\Components\Component;
+use Hostmoz\BladeBootstrapComponents\Components\HandlesDefaultAndOldValue;
+use Hostmoz\BladeBootstrapComponents\Components\HandlesValidationErrors;
+
 class DataList extends Component
 {
     use HandlesValidationErrors;
@@ -13,8 +14,6 @@ class DataList extends Component
     public string $name;
     public string $label;
     public string $type;
-
-    public $options;
 
     public $value;
 
@@ -29,15 +28,14 @@ class DataList extends Component
         string $type = 'text',
         $bind = null,
         $default = null,
-        $options = [],
+        public $options = [],
         $language = null,
         bool $showErrors = true
     ) {
-        $this->name       = $name;
-        $this->label      = $label;
-        $this->type       = $type;
+        $this->name = $name;
+        $this->label = $label;
+        $this->type = $type;
         $this->showErrors = $showErrors;
-        $this->options    = (array)$options;
 
         if ($language) {
             $this->name = "{$name}[{$language}]";
