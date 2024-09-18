@@ -2,10 +2,12 @@
 
 namespace Hostmoz\BladeBootstrapComponents;
 
+use Hostmoz\BladeBootstrapComponents\Components\Elements\Modal;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
+use Livewire\Livewire;
 
 class BladeBootstrapComponentsServiceProvider extends ServiceProvider
 {
@@ -51,6 +53,7 @@ class BladeBootstrapComponentsServiceProvider extends ServiceProvider
         $prefix = config('blade-bootstrap-components.prefix');
 
         Blade::componentNamespace('Hostmoz\\BladeBootstrapComponents\\Components', $prefix);
+        Livewire::component('bootstrap-modal', Modal::class);
     }
 
     /**
