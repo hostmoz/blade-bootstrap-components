@@ -30,9 +30,9 @@
                 {!! $append !!}
             </div>
         @endisset
-        @if($hasErrorAndShow($name))
-            <x-bootstrap::form.errors :name="$name"/>
-        @endif
     </div>
+    @if($hasErrorAndShow($name))
+        <x-bootstrap::form.errors :name="$name"/>
+    @endif
     {!! $help ?? null !!}
 </div>
