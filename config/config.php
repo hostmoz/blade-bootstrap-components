@@ -2,7 +2,6 @@
 use Hostmoz\BladeBootstrapComponents\Components;
 return [
     'prefix' => 'bootstrap',
-    'include_css' => true,
     'include_js' => true,
 
     'component_defaults' => [

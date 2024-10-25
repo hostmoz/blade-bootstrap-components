@@ -18,6 +18,8 @@ class Modal extends Component
 
     public array $components = [];
 
+    public string $modalTitle = '';
+
     public function resetState(): void
     {
         $this->components = [];
@@ -57,6 +59,7 @@ class Modal extends Component
         ];
 
         $this->activeComponent = $id;
+        $this->modalTitle = $arguments['modalTitle'];
 
         $this->dispatch('activeModalComponentChanged', id: $id);
     }
@@ -123,10 +126,6 @@ class Modal extends Component
     {
         if (config('blade-bootstrap-components.include_js', true)) {
             $jsPath = __DIR__.'/../../../public/js/modal.js';
-        }
-
-        if (config('blade-bootstrap-components.include_css', false)) {
-            $cssPath = __DIR__.'/../../../public/css/modal.css';
         }
 
         return view('blade-bootstrap-components::elements.modal', [

@@ -30,7 +30,7 @@
         <div class="modal-dialog modal-xl" role="document" id="modal-container">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{$modalTitle?? ''}}</h5>
                     <button type="button" class="close" x-on:click="closeModalOnClickAway()">
                         <span aria-hidden="true">&times;</span>
                     </button>
