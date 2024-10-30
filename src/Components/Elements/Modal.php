@@ -59,7 +59,7 @@ class Modal extends Component
         ];
 
         $this->activeComponent = $id;
-        $this->modalTitle = $arguments['modalTitle'];
+        $this->modalTitle = $arguments['modalTitle'] ??'';
 
         $this->dispatch('activeModalComponentChanged', id: $id);
     }
