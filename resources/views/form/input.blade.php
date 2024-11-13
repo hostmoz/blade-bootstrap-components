@@ -8,7 +8,7 @@
             </div>
         @endisset
 
-        <input {!! $attributes->merge(['class' => 'form-control border-end-0' . ($hasError($name) ? 'is-invalid' : '')]) !!}
+        <input {!! $attributes->merge(['class' => 'form-control border-end-0 ' . ($hasError($name) ? ' is-invalid' : '')]) !!}
                type="{{ $type }}"
 
                @if($isWired())
@@ -31,8 +31,6 @@
             </div>
         @endisset
     </div>
-    @if($hasErrorAndShow($name))
-        <x-bootstrap::form.errors :name="$name"/>
-    @endif
+    <x-bootstrap::form.errors :name="$name"/>
     {!! $help ?? null !!}
 </div>

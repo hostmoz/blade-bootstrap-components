@@ -1,5 +1,5 @@
 @error($name)
-    <div {!! $attributes->merge(['class' => 'invalid-feedback']) !!}>
+    <div {!! $attributes->merge(['class' => 'is-invalid text-danger']) !!}>
         {{ $message }}
     </div>
 @enderror

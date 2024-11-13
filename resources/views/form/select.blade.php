@@ -14,7 +14,7 @@
                 required="required"
             @endif
 
-            {!! $attributes->merge(['class' => 'form-select' . ($hasError($name) ? 'is-invalid' : '')]) !!}>
+            {!! $attributes->merge(['class' => 'form-select ' . ($hasError($name) ? ' is-invalid' : '')]) !!}>
         @if($empty)
             <option value=""></option>
         @endif
