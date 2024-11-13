@@ -2,13 +2,18 @@
     <x-bootstrap::form.label :label="$label" :for="$name" class="{{$required?'required':''}}"/>
     <div class="input-group date">
         @isset($prepend)
-            <div class="input-group-text">
+            <div class="input-group-text">pickaday livewire
                 {!! $prepend !!}
             </div>
         @endisset
         <input type="text"
                {!! $attributes->merge(['class' => 'form-control ' . ($hasError($name) ? 'is-invalid' : '')]) !!} id="{{$name}}"
-               name="{{$name}}" value="{{$value}}"
+               @if($isWired())
+                   wire:model="{{ $name }}"
+               @else
+                   name="{{ $name }}"
+               value="{{$value}}"
+               @endif
                @if($required)
                    required="required"
                 @endif>
@@ -38,6 +43,13 @@
         $("[name='{{$name}}']").datepicker({
             format: 'yyyy-mm-dd',
             autoclose: true,
+        }).on('changeDate', function (e) {
+            let event = {
+                field: $(this).attr('name'),
+                value: $(this).val()
+            }
+
+            Livewire.dispatch('dateFieldUpdated',event);
         });
     </script>
 @endpush

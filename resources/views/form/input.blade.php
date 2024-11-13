@@ -8,14 +8,14 @@
             </div>
         @endisset
 
-        <input {!! $attributes->merge(['class' => 'form-control border-end-0 ' . ($hasError($name) ? ' is-invalid' : '')]) !!}
+        <input {!! $attributes->merge(['class' => 'form-control ' . ($hasError($name) ? ' is-invalid' : '')]) !!}
                type="{{ $type }}"
+               id="{{ $name }}"
 
                @if($isWired())
                    wire:model="{{ $name }}"
                @else
                    name="{{ $name }}"
-               id="{{ $name }}"
                value="{{$value}}"
                @endif
                placeholder="{{$placeholder??$label}}"
