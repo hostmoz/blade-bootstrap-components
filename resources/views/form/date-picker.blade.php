@@ -2,12 +2,12 @@
     <x-bootstrap::form.label :label="$label" :for="$name" class="{{$required?'required':''}}"/>
     <div class="input-group date">
         @isset($prepend)
-            <div class="input-group-text">pickaday livewire
+            <div class="input-group-text">
                 {!! $prepend !!}
             </div>
         @endisset
         <input type="text"
-               {!! $attributes->merge(['class' => 'form-control ' . ($hasError($name) ? 'is-invalid' : '')]) !!} id="{{$name}}"
+               {!! $attributes->merge(['class' => 'form-control ' . ($hasError($name) ? ' is-invalid' : '')]) !!} id="{{$name}}"
                @if($isWired())
                    wire:model="{{ $name }}"
                @else
@@ -20,9 +20,7 @@
         <div class="input-group-text">
             <span class="bi bi-calendar-date"></span>
         </div>
-        @if($hasErrorAndShow($name))
             <x-bootstrap::form.errors :name="$name"/>
-        @endif
     </div>
 </div>
 
