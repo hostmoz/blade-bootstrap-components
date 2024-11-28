@@ -20,8 +20,8 @@
         <div class="input-group-text">
             <span class="bi bi-calendar-date"></span>
         </div>
-            <x-bootstrap::form.errors :name="$name"/>
     </div>
+    <x-bootstrap::form.errors :name="$name"/>
 </div>
 
 
