@@ -15,7 +15,7 @@ class DatePicker extends Component
     public string $name='';
     public ?string $value='';
 
-    public function __construct(string $name='date_picker',string $label='',string $value='',$bind = null,
+    public function __construct(string $name='date_picker',string $label='',?string $value='',$bind = null,
                                 $default = null,
                                 $language = null,
                                 bool $showErrors = true, public $required = false)

@@ -38,16 +38,28 @@
 @endonce
 @push('scripts')
     <script>
-        $("[name='{{$name}}']").datepicker({
-            format: 'yyyy-mm-dd',
-            autoclose: true,
-        }).on('changeDate', function (e) {
-            let event = {
-                field: $(this).attr('name'),
-                value: $(this).val()
+        document.addEventListener("DOMContentLoaded", function () {
+            let datePicker = $("[name='{{$name}}']");
+            let initialValue = "{{ $value }}";
+
+            datePicker.datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true,
+            });
+
+            // Initialize with $value if not empty
+            if (initialValue) {
+                datePicker.datepicker('setDate', initialValue);
             }
 
-            Livewire.dispatch('dateFieldUpdated',event);
+            datePicker.on('changeDate', function (e) {
+                let event = {
+                    field: $(this).attr('name'),
+                    value: $(this).val()
+                };
+
+                Livewire.dispatch('dateFieldUpdated', event);
+            });
         });
     </script>
 @endpush
