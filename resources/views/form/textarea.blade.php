@@ -9,7 +9,9 @@
         @endif
 
         {!! $attributes->merge(['class' => 'form-control ' . ($hasError($name) ? 'is-invalid' : '')]) !!}
-    >@unless($isWired()){!! $value !!}@endunless</textarea>
+    >
+        {!! $value !!}
+    </textarea>
 
     {!! $help ?? null !!}
 
