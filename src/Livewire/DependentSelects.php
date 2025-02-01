@@ -43,7 +43,7 @@ class DependentSelects extends Component
     /**
      * Montar o componente e carregar os países.
      */
-    public function mount($countryField, $provinceField, $districtField, $selectedCountry = null, $selectedProvince = null, $selectedDistrict = null,$countryLabel = 'País',$provinceLabel = 'Província',$districtLabel = 'Distrito')
+    public function mount($countryField, $provinceField, $districtField, $selectedCountry = null, $singleCountry=false,$selectedProvince = null, $selectedDistrict = null,$countryLabel = 'País',$provinceLabel = 'Província',$districtLabel = 'Distrito')
     {
         $this->countryField = $countryField;
         $this->provinceField = $provinceField;
@@ -53,7 +53,11 @@ class DependentSelects extends Component
         $this->selectedProvince = $selectedProvince;
         $this->selectedDistrict = $selectedDistrict;
 
-        $this->countries = Country::orderBy('name')->pluck('name', 'id')->toArray();
+        if($singleCountry){
+            $this->countries = Country::where('id', $this->selectedCountry)->orderBy('name')->pluck('name', 'id')->toArray();
+        }else{
+            $this->countries = Country::orderBy('name')->pluck('name', 'id')->toArray();
+        }
 
         // Se já houver um país selecionado, carregar as províncias correspondentes
         if ($this->selectedCountry) {
@@ -71,7 +75,10 @@ class DependentSelects extends Component
      */
     public function updatedSelectedCountry($countryId)
     {
-        $this->provinces = Province::where('country_id', $countryId)->orderBy('name')->pluck('name', 'id')->toArray();
+        $this->provinces = Province::where('country_id', $countryId)->orderBy('name')->pluck('name', 'id');
+        if($this->provinces->isEmpty()){
+            $this->provinces = Province::where('id', 12)->pluck('name', 'id');
+        }
         $this->selectedProvince = null;
         $this->districts = [];
         $this->selectedDistrict = null;
