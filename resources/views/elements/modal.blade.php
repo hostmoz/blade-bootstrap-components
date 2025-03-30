@@ -31,9 +31,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">{{$modalTitle?? ''}}</h5>
-                    <button type="button" class="close" x-on:click="closeModalOnClickAway()">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"  x-on:click="closeModalOnClickAway()"></button>
                 </div>
                 <div class="modal-body">
                     @forelse($components as $id => $component)
