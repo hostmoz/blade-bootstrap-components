@@ -4,6 +4,7 @@ namespace Hostmoz\BladeBootstrapComponents;
 
 use Hostmoz\BladeBootstrapComponents\Components\Elements\Modal;
 use Hostmoz\BladeBootstrapComponents\Livewire\DependentSelects;
+use Hostmoz\BladeBootstrapComponents\Livewire\SelectPlus;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
@@ -56,6 +57,7 @@ class BladeBootstrapComponentsServiceProvider extends ServiceProvider
         Blade::componentNamespace('Hostmoz\\BladeBootstrapComponents\\Components', $prefix);
         Livewire::component('bootstrap-modal', Modal::class);
         Livewire::component('bootstrap::dependent-selects', DependentSelects::class);
+        Livewire::component('bootstrap::select-plus', SelectPlus::class);
     }
 
     /**
