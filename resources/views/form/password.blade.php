@@ -16,7 +16,7 @@
                value="{{ $value }}"
                 @endif
         />
-        <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+        <a href="javascript:;" class="input-group-text bg-transparent"><i class='fas fa-hide'></i></a>
         @if($hasErrorAndShow($name))
             <x-bootstrap::form.errors :name="$name"/>
         @endif

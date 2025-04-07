@@ -2,7 +2,7 @@
     'class' => 'btn btn-danger',
     'type' => 'submit'
 ]) !!}>
-    <i class='bx bxs-trash'></i> {!! $label ?: __('Submit') !!}
+    <i class='fas fa-trash'></i> {!! $label ?: __('Submit') !!}
 </button>
 
 

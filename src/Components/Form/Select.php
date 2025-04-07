@@ -32,6 +32,7 @@ class Select extends Component
         $options = [],
         $bind = null,
         $default = null,
+        $selected =null,
         bool $multiple = false,
         bool $showErrors = true,
         bool $empty = true,
@@ -45,6 +46,7 @@ class Select extends Component
 
         if ($this->isNotWired()) {
             $default = $this->getBoundValue($bind, $name) ?: $default;
+            $default = $selected ?: $default;
             $named = $this->convertBracketsToDotNotation($name);
             $this->selectedKey = old($named, $default);
 
