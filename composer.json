@@ -22,7 +22,7 @@
     "require": {
         "php": ">=7.3",
         "illuminate/support": ">=9.0",
-        "livewire/livewire": "^3.2.3",
+        "livewire/livewire": "^3.2.3 || ^4.0@beta",
         "spatie/laravel-package-tools": "^1.9"
     },
     "require-dev": {
