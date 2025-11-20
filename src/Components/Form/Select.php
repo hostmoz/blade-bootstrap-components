@@ -26,6 +26,8 @@ class Select extends Component
      *
      * @return void
      */
+    public ?string $help = null;
+
     public function __construct(
         string $name,
         string $label = '',
@@ -36,7 +38,8 @@ class Select extends Component
         bool $multiple = false,
         bool $showErrors = true,
         bool $empty = true,
-        public $required=false
+        public $required=false,
+        ?string $help = null
     ) {
         $this->name    = $name;
         $this->label   = $label;
@@ -54,6 +57,7 @@ class Select extends Component
 
         $this->multiple   = $multiple;
         $this->showErrors = $showErrors;
+        $this->help = $help;
     }
 
     public function isSelected($key): bool

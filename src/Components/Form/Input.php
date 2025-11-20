@@ -15,12 +15,14 @@ class Input extends Component
     public string $label;
     public string $type;
     public $required = false;
+    public ?string $help = null;
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
+
     public function __construct(
         string $name,
         public ?string $value = '',
@@ -31,13 +33,15 @@ class Input extends Component
         $required = false,
         $bind = null,
         $default = null,
-        bool $showErrors = true
+        bool $showErrors = true,
+        ?string $help = null
     ) {
         $this->name = $name;
         $this->label = $label;
         $this->type = $type;
         $this->showErrors = $showErrors;
         $this->required = $required;
+        $this->help = $help;
         $this->setValue($name, $bind, $default ?? $value);
     }
 }
